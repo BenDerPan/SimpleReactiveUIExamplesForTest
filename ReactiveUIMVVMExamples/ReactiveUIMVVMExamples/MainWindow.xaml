@@ -1,0 +1,17 @@
+﻿<Window x:Class="ReactiveUIMVVMExamples.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReactiveUIMVVMExamples"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+       
+        <StackPanel Orientation="Vertical">
+            <TextBox Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Button Content="等我可以点了，就是找对人了" Command="{Binding ShowName}"></Button>
+            <Button Content="查看对的人" Click="Button_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
